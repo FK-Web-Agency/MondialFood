@@ -9,10 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^2.0.6",
+    "dompurify": "^2.3.6",
+    "emailjs-com": "^3.2.0",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "styled-components": "^5.3.3"
+    "react-google-recaptcha": "^2.1.0",
+    "react-toastify": "^8.2.0",
+    "styled-components": "^5.3.3",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "eslint": "8.11.0",

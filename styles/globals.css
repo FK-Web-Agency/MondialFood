@@ -7,8 +7,8 @@
 
   /* Colors */
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(36, 72%, 48%);
-  --first-color-alt: hsl(36, 72%, 44%);
+  --first-color: hsl(18, 90%, 53%);
+  --first-color-alt: hsl(18, 90%, 44%);
   --black-color: hsl(206, 12%, 12%);
   --card-color: hsl(0, 0%, 90%);
   --title-color: hsl(206, 12%, 12%);
@@ -97,4 +97,17 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--black-color);
+  padding: 1rem 1.75rem;
+  border-radius: .25rem;
+  font-size: var(--normal-font-size);
+  text-transform: uppercase;
+}
+
+.button a {
+  color: #fff;
 }
