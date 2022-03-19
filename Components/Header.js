@@ -8,7 +8,7 @@ const Header = () => {
   const [sticky, setSticky] = useState(0);
 
   useEffect(() => {
-    window.addEventListener('resize', handleWidth);
+    setWidth(window.innerWidth);
 
     const headerObserver = new IntersectionObserver(handleSticky, {
       root: null,
@@ -17,6 +17,7 @@ const Header = () => {
 
     headerObserver.observe(document.querySelector('#banner'));
 
+    window.addEventListener('resize', handleWidth);
     return () => {
       window.removeEventListener('resize', handleWidth);
     };
