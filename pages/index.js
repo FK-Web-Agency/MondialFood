@@ -1,12 +1,23 @@
 import Head from 'next/head';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import Banner from '../Components/Banner';
 import Espacialty from '../Components/Espacialty';
 import Footer from '../Components/Footer';
 import Form from '../Components/Form';
 import Header from '../Components/Header';
 import Product from '../Components/Product';
+import loading from './loading.gif';
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
+  }, []);
+
   return (
     <div>
       <Head>
@@ -24,6 +35,12 @@ export default function Home() {
           defer></script>
       </Head>
 
+      {isLoading && (
+        <div className='load'>
+          <Image src={loading} alt="" />
+        </div>
+      )}
+
       <Header />
 
       <main>
@@ -32,7 +49,7 @@ export default function Home() {
         <Product />
         <Form />
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
