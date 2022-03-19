@@ -5,10 +5,12 @@ import { Section } from './styled';
 
 const Espacialty = () => {
   return (
-    <Section  id="espacialty">
+    <Section id="espacialty">
       <Container>
         <div>
-          <h2 className='title'>Lorem ipsum dolor sit amet consectetur adipisicing!</h2>
+          <h2 className="title">
+            Lorem ipsum dolor sit amet consectetur adipisicing!
+          </h2>
 
           <div className="button">
             <Link href="#">See more</Link>
@@ -17,7 +19,7 @@ const Espacialty = () => {
 
         <Wrap>
           <div>
-            <img src="assets/img/specialty1.png" alt="" />
+            <i className="bx bx-chat"></i>
 
             <h3>Lorem ipsum dolor sit.</h3>
             <p>
@@ -27,7 +29,7 @@ const Espacialty = () => {
           </div>
 
           <div>
-            <img src="assets/img/specialty2.png" alt="" />
+            <i className="bx bx-chat"></i>
 
             <h3>Lorem ipsum dolor sit.</h3>
             <p>
@@ -37,8 +39,7 @@ const Espacialty = () => {
           </div>
 
           <div>
-            <img src="assets/img/specialty2.png" alt="" />
-
+            <i className="bx bx-chat"></i>
             <h3>Lorem ipsum dolor sit.</h3>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic,
@@ -52,7 +53,7 @@ const Espacialty = () => {
 };
 
 const Container = styled.div`
-/*=====   h2 {
+  /*=====   h2 {
     position: relative;
     font-size: var(--h1-font-size);
     padding-left: 1.25rem;
@@ -92,6 +93,11 @@ const Wrap = styled.div`
   justify-content: center;
   row-gap: 2.5rem;
 
+  i {
+    color: var(--first-color);
+    font-size: calc(var(--biggest-font-size) + 2rem);
+  }
+
   @media screen and (min-width: 576px) {
     grid-template-columns: repeat(2, 200px);
     column-gap: 3rem;
@@ -100,6 +106,23 @@ const Wrap = styled.div`
   @media screen and (min-width: 1040px) {
     grid-template-columns: repeat(3, 250px);
     column-gap: 8rem;
+
+    div:nth-child(1),
+    div:nth-child(2) {
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 1px;
+        height: 120px;
+        background-color: var(--text-color-light);
+        position: absolute;
+        right: -5rem;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+      }
+    }
   }
 `;
 
