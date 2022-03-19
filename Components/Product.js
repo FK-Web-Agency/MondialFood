@@ -153,6 +153,7 @@ const Container = styled.div`
   }
 
   @media screen and (min-width: 1040px) {
+    max-width: 1380px;
     margin-inline: auto;
   }
 `;

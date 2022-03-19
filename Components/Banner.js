@@ -49,11 +49,11 @@ const Section = styled.section`
     position: relative;
   }
 
-  @media screen and (min-width: 1700px) {
+/*=====   @media screen and (min-width: 1700px) {
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
-  }
+  } =====*/
 `;
 
 const Container = styled.div`

@@ -82,6 +82,10 @@ const Container = styled.header`
   nav>a, .bx-grid-alt{
     color: var(--title-color) !important;
   }
+
+  ul a, ul a::after { 
+    color: var(--text-color) !important;
+  }
 `}
 
   nav {

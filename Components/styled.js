@@ -22,7 +22,13 @@ export const Section = styled.section`
       background-color: var(--first-color);
     }
 
-    @media screen and (min-width: 1040px) {
+  }
+
+  @media screen and (min-width: 1040px) {
+    max-width: 1380px;
+    margin-inline: auto;
+
+    .title {
       padding-right: 15rem;
       padding-left: 1.75rem;
 
@@ -32,10 +38,6 @@ export const Section = styled.section`
         top: 12px;
       }
     }
-  }
-
-  @media screen and (min-width: 1040px) {
-    margin-inline: auto;
   }
 
   @media screen and (min-width: 767px) {

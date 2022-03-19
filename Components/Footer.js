@@ -86,8 +86,7 @@ const Container = styled.footer`
 
   & > div:nth-child(1) {
     max-width: 1024px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-inline: 1.5rem;
   }
 
   & div:nth-child(1) > p {
@@ -95,6 +94,11 @@ const Container = styled.footer`
   }
 
   @media screen and (min-width: 1040px) {
+    & > div:nth-child(1) {
+      max-width: 1380px;
+      margin-inline: auto;
+    }
+
     h1 {
       font-size: var(--h2-font-size);
     }
@@ -103,6 +107,7 @@ const Container = styled.footer`
 
 const Wrapper = styled.div`
   display: grid;
+  justify-content: center;
   row-gap: 2.5rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid var(--text-color);
@@ -120,6 +125,7 @@ const Wrapper = styled.div`
 
   @media screen and (min-width: 1040px) {
     grid-template-columns: repeat(4, max-content);
+    justify-content: start;
     column-gap: 4rem;
     padding-bottom: 5.5rem;
   }
