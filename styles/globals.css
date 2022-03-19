@@ -111,3 +111,18 @@ button {
 .button a {
   color: #fff;
 }
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+  width: .6rem;
+  background-color: hsl(206, 4%, 80%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsla(18, 90%, 44%, 0.8);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(206, 4%, 48%);
+}
