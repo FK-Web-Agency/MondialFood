@@ -26,7 +26,7 @@ const Footer = () => {
             <h2>Address</h2>
             <p>
               9876 Hacienda Av. <br />
-              Lima, La Libertad 123, Perú
+              Lima, La Libertad 123, Spain
             </p>
           </div>
 
@@ -34,7 +34,7 @@ const Footer = () => {
             <h2>Contact</h2>
             <p>
               +987654321 <br />
-              coffee@email.com
+              contact@email.com
             </p>
           </div>
 
