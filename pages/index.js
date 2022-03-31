@@ -33,6 +33,7 @@ export default function Home() {
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
           defer></script>
+           <script src="https://unpkg.com/scrollreveal" defer></script>
       </Head>
 
       {isLoading && (
@@ -44,7 +45,8 @@ export default function Home() {
       <Header />
 
       <main>
-        <Banner />
+
+        <Banner/>
         <Espacialty />
         <Product />
         <Form />

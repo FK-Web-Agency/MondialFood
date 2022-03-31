@@ -74,7 +74,7 @@ const Container = styled.footer`
 
   h1 {
     display: flex;
-    align-items: center;
+    align-items: start;
     column-gap: 0.5rem;
     font-weight: var(--font-bold);
     color: var(--text-color-light);

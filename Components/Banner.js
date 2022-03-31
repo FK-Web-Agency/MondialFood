@@ -1,120 +1,65 @@
 import Image from 'next/image';
-import React from 'react';
+import { useEffect } from 'react';
 import styled from 'styled-components';
-import photo from './banner-img.png';
+import img1 from '/public/banner/3D-Samossa-Legumes.png';
+import img2 from '/public/banner/El Msamen 20+1.png';
+import img3 from '/public/banner/Meloui Nature x5.png';
+import logo from '/public/banner/logo-banner.png';
 const Banner = () => {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: 'top',
+      distance: '60px',
+      duration: 2000,
+      delay: 400,
+      //  reset: true
+    });
+
+    sr.reveal('#logo', {delay: 2600})
+    sr.reveal('#img1', { delay: 2650, origin: 'bottom' });
+    sr.reveal('#img2', { delay: 3800, origin: 'bottom' });
+    sr.reveal('#img3', { delay: 4800, origin: 'bottom' });
+  }, []);
+
   return (
-    <Section id="banner">
-      <Container>
-        <Content>
-          <h1>
-            Choose Your Favorite Brands Food And Enjoy<span>.</span>
-          </h1>
-          <p>Buy the best and delicious coffees.</p>
+    <Container id="banner">
+      <div>
 
-          <div>
-            <Data>
-              <h2>20K</h2>
-              <h3>Testimonials</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus, velit!
-              </p>
-            </Data>
+      <Image id="logo" src={logo} alt="" layout="responsive" />
+      </div>
 
-            <Data>
-              <h2>20</h2>
-              <h3>Exclusif brands</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus, velit!
-              </p>
-            </Data>
-          </div>
-        </Content>
-      </Container>
-
-      <Image src={photo} alt="" />
-    </Section>
+      <section>
+        <div>
+          <Image id="img1" src={img3} alt="" />
+        </div>
+        <div>
+          <Image id="img2" src={img1} alt="" />
+        </div>
+        <div>
+          <Image id="img3" src={img2} alt="" />
+        </div>
+      </section>
+    </Container>
   );
 };
 
-const Section = styled.section`
-  display: grid;
-  gap: 0;
-
-  @media screen and (min-width: 767px) {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: stretch;
-    position: relative;
-  }
-
-/*=====   @media screen and (min-width: 1700px) {
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-  } =====*/
-`;
-
 const Container = styled.div`
-  padding: 7rem 0 2.5rem;
-  background: linear-gradient(
-    160deg,
-    hsla(206, 5%, 24%, 1) -4%,
-    hsla(206, 12%, 12%, 1) 46%
-  );
-
-  h1 {
-    color: #fff;
-    font-size: var(--biggest-font-size);
-    margin-bottom: 1.5rem;
-
-    & > span {
-      color: var(--first-color);
-    }
-  }
-
-  p {
-    margin-bottom: 2rem;
-  }
-  @media screen and (min-width: 1200px) {
-    padding-top: 10rem;
-
-    h1 {
-      margin-bottom: 2rem;
-    }
-
-    p {
-      margin-bottom: 3rem;
-    }
-  }
-`;
-
-const Content = styled.div`
-  max-width: 1024px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-
+  background-color: #724532;
   & > div {
-    border-top: 1px solid var(--text-color);
-    padding-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.5rem;
+    padding: 3rem 0 2rem 0;
+    height: 40;
   }
-`;
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-const Data = styled.div`
-  h2 {
-    color: var(--first-color);
-    font-size: var(--h1-font-size);
-    margin-bottom: 1.5rem;
-  }
-
-  h3 {
-    color: #fff;
-    font-size: var(--h3-font-size);
-    margin-bottom: 0.5rem;
+    div {
+      width: calc(100% / 3);
+    }
+    #img1 {
+      transform: scale(1.6);
+    }
   }
 `;
 
